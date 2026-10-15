@@ -17,15 +17,16 @@
         import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-database.js";
 
         // Konfigurasi Firebase Anda
-        const firebaseConfig = {
-            apiKey: "AIzaSyBMp5ibZ25oufzH9BAc0Eua5g0tNe7NCM",
-            authDomain: "pemogramandasar.firebaseapp.com",
-            projectId: "pemogramandasar",
-            storageBucket: "pemogramandasar.firebasestorage.app",
-            messagingSenderId: "135341405190",
-            appId: "1:135341405190:web:b33adbb85d94f3f8d7ff87",
-            measurementId: "G-1S9Z5WQ36B"
-        };
+       const firebaseConfig = {
+        apiKey: "AIzaSyBMp5ibZ25oufzH9BAc0Eua5g0tNe7NCM",
+        authDomain: "pemogramandasar.firebaseapp.com",
+        databaseURL: "https://pemogramandasar-default-rtdb.asia-southeast1.firebasebasedatabase.app", // <--- Pastikan baris ini ADA!
+        projectId: "pemogramandasar",
+        storageBucket: "pemogramandasar.firebasestorage.app",
+        messagingSenderId: "135341405190",
+        appId: "1:135341405190:web:b33adbb85d94f3f8d7ff87",
+        measurementId: "G-1S9Z5WQ36B"
+};
 
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
