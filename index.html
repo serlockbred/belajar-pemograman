@@ -20,7 +20,6 @@
         const firebaseConfig = {
             apiKey: "AIzaSyBMp5ibZ25oufzH9BAc0Eua5g0tNe7NCM",
             authDomain: "pemogramandasar.firebaseapp.com",
-            databaseURL: "https://pemogramandasar-default-rtdb.asia-southeast1.firebasebasedatabase.app",
             projectId: "pemogramandasar",
             storageBucket: "pemogramandasar.firebasestorage.app",
             messagingSenderId: "135341405190",
@@ -37,20 +36,25 @@
                 title: "BAB 1: Logika & Algoritma Pemrograman",
                 description: "Memahami cara berpikir komputasional dan menyusun langkah sistematis penyelesaian masalah.",
                 materi: `
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">1. Pengertian Logika</h3>
-                    <p class="mb-3">Logika adalah kemampuan berpikir secara benar, rasional, dan masuk akal untuk menilai suatu pernyataan apakah bernilai Benar atau Salah.</p>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">1. Pengertian Algoritma</h3>
+                    <p class="mb-3"><strong>Algoritma</strong> adalah urutan langkah-langkah logis dan terstruktur yang disusun secara sistematis untuk menyelesaikan suatu masalah atau menjalankan perintah komputer. Kata 'logis' berarti setiap langkah harus dapat dinilai benar atau salah.</p>
                     
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. Pengertian Algoritma</h3>
-                    <p class="mb-3">Algoritma adalah urutan langkah-langkah logis dan terstruktur yang disusun secara sistematis untuk menyelesaikan suatu masalah.</p>
-                    
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">3. Karakteristik Utama Algoritma</h3>
-                    <ul class="list-disc list-inside space-y-1 mb-4 pl-2 text-sm">
-                        <li><strong>Input:</strong> Memiliki data masukan untuk diproses.</li>
-                        <li><strong>Output:</strong> Menghasilkan minimal 1 solusi akhir.</li>
-                        <li><strong>Finiteness:</strong> Harus berhenti setelah menyelesaikan sejumlah langkah.</li>
-                        <li><strong>Definiteness:</strong> Setiap langkah harus jelas dan tidak ambigu.</li>
-                        <li><strong>Effectiveness:</strong> Sederhana dan dapat dikerjakan oleh komputer.</li>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. Karakteristik Algoritma Utama</h3>
+                    <ul class="list-disc list-inside space-y-1 mb-4 pl-2">
+                        <li><strong>Input:</strong> Memiliki 0 atau lebih data masukan.</li>
+                        <li><strong>Output:</strong> Menghasilkan minimal 1 keluaran/solusi.</li>
+                        <li><strong>Finiteness (Keterbatasan):</strong> Harus berhenti setelah menyelesaikan sejumlah langkah.</li>
+                        <li><strong>Definiteness (Kepastian):</strong> Setiap langkah harus jelas dan tidak ambigu.</li>
+                        <li><strong>Effectiveness (Keefektifan):</strong> Langkah sederhana dan dapat dikerjakan oleh komputer.</li>
                     </ul>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">3. Penulisan Algoritma</h3>
+                    <p class="mb-2">Ada 3 cara umum menuliskan algoritma:</p>
+                    <ol class="list-decimal list-inside space-y-2 mb-4 pl-2">
+                        <li><strong>Kalimat Deskriptif:</strong> Menggunakan bahasa sehari-hari.</li>
+                        <li><strong>Pseudocode:</strong> Kode semu yang mirip dengan bahasa pemrograman tetapi lebih bebas dan mudah dibaca manusia.</li>
+                        <li><strong>Flowchart:</strong> Diagram alir yang menggambarkan urutan logika menggunakan simbol-simbol standar.</li>
+                    </ol>
 
                     <div class="bg-slate-800 text-slate-100 p-4 rounded-xl text-sm mb-4">
                         <span class="text-indigo-400 font-bold">// Contoh Pseudocode: Menghitung Luas Persegi Panjang</span>
@@ -87,7 +91,42 @@ END
                 description: "Memahami tempat penyimpanan data sementara di memori komputer.",
                 materi: `
                     <h3 class="text-xl font-bold text-slate-900 mb-2">1. Apa itu Variabel?</h3>
-                    <p class="mb-3">Variabel adalah nama lokasi di dalam memori komputer yang digunakan untuk menyimpan suatu nilai (data).</p>
+                    <p class="mb-3"><strong>Variabel</strong> adalah nama lokasi di dalam memori komputer yang digunakan untuk menyimpan suatu nilai (data). Nilai di dalam variabel dapat diakses dan diubah selama program berjalan.</p>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. Tipe Data Primitif</h3>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+                            <thead class="bg-slate-100">
+                                <tr>
+                                    <th class="border border-slate-200 p-2">Tipe Data</th>
+                                    <th class="border border-slate-200 p-2">Penjelasan</th>
+                                    <th class="border border-slate-200 p-2">Contoh Nilai</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-mono">Integer (int)</td>
+                                    <td class="border border-slate-200 p-2">Bilangan bulat tanpa desimal</td>
+                                    <td class="border border-slate-200 p-2"><code>10</code>, <code>-5</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-mono">Float / Double</td>
+                                    <td class="border border-slate-200 p-2">Bilangan desimal (pecahan)</td>
+                                    <td class="border border-slate-200 p-2"><code>3.14</code>, <code>0.5</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-mono">String</td>
+                                    <td class="border border-slate-200 p-2">Teks (diapit tanda kutip)</td>
+                                    <td class="border border-slate-200 p-2"><code>"Budi"</code></td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-mono">Boolean (bool)</td>
+                                    <td class="border border-slate-200 p-2">Nilai kebenaran</td>
+                                    <td class="border border-slate-200 p-2"><code>true</code> / <code>false</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 `,
                 quiz: [
                     {
@@ -107,12 +146,30 @@ END
                 description: "Mengolah dan memanipulasi data variabel menggunakan simbol khusus.",
                 materi: `
                     <h3 class="text-xl font-bold text-slate-900 mb-2">1. Operator Aritmatika</h3>
-                    <p class="mb-3">Digunakan untuk perhitungan matematika seperti penjumlahan, pengurangan, perkalian, pembagian, dan sisa bagi (modulo).</p>
+                    <ul class="list-disc list-inside space-y-1 mb-4 pl-2 font-mono text-sm">
+                        <li><strong>+</strong> : Penjumlahan</li>
+                        <li><strong>-</strong> : Pengurangan</li>
+                        <li><strong>*</strong> : Perkalian</li>
+                        <li><strong>/</strong> : Pembagian</li>
+                        <li><strong>%</strong> : Modulo / Sisa Bagi</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. Operator Logika</h3>
+                    <ul class="list-disc list-inside space-y-1 mb-4 pl-2 text-sm">
+                        <li><strong>AND (<code>&amp;&amp;</code>)</strong>: Bernilai TRUE jika KEDUA kondisi TRUE.</li>
+                        <li><strong>OR (<code>||</code>)</strong>: Bernilai TRUE jika salah satu kondisi TRUE.</li>
+                        <li><strong>NOT (<code>!</code>)</strong>: Membalikkan nilai boolean.</li>
+                    </ul>
                 `,
                 quiz: [
                     {
                         question: "Berapakah hasil dari operasi aritmatika 13 % 4 (Modulo)?",
                         options: ["3", "1", "4", "0"],
+                        answer: 1
+                    },
+                    {
+                        question: "Hasil dari pernyataan ekspresi logika (5 > 2) && (3 == 4) adalah...",
+                        options: ["true", "false", "null", "undefined"],
                         answer: 1
                     }
                 ]
@@ -122,7 +179,17 @@ END
                 description: "Mengarahkan eksekusi alur program berdasarkan kondisi tertentu.",
                 materi: `
                     <h3 class="text-xl font-bold text-slate-900 mb-2">1. Struktur IF - ELSE</h3>
-                    <p class="mb-3">Digunakan untuk mengambil keputusan berdasarkan kondisi benar atau salah.</p>
+                    <div class="bg-slate-800 text-slate-100 p-4 rounded-xl text-sm mb-4">
+                        <pre>
+let nilai = 80;
+
+if (nilai >= 75) {
+    console.log("Selamat, Anda Lulus!");
+} else {
+    console.log("Maaf, Anda belum lulus.");
+}
+                        </pre>
+                    </div>
                 `,
                 quiz: [
                     {
@@ -142,7 +209,13 @@ END
                 description: "Menjalankan sekumpulan blok perintah secara berulang-ulang secara otomatis.",
                 materi: `
                     <h3 class="text-xl font-bold text-slate-900 mb-2">1. For Loop</h3>
-                    <p class="mb-3">Digunakan untuk melakukan perulangan dengan jumlah iterasi yang sudah diketahui secara pasti.</p>
+                    <div class="bg-slate-800 text-slate-100 p-4 rounded-xl text-sm mb-4">
+                        <pre>
+for (let i = 1; i <= 5; i++) {
+    console.log("Angka ke-" + i);
+}
+                        </pre>
+                    </div>
                 `,
                 quiz: [
                     {
@@ -158,6 +231,14 @@ END
                 materi: `
                     <h3 class="text-xl font-bold text-slate-900 mb-2">1. Pengertian Fungsi</h3>
                     <p class="mb-3">Fungsi adalah blok kode terpisah yang melakukan tugas tertentu dan dapat dipanggil berulang kali.</p>
+                    <div class="bg-slate-800 text-slate-100 p-4 rounded-xl text-sm mb-4">
+                        <pre>
+function hitungLuasPersegi(sisi) {
+    return sisi * sisi;
+}
+let hasil = hitungLuasPersegi(5); // hasil: 25
+                        </pre>
+                    </div>
                 `,
                 quiz: [
                     {
@@ -337,7 +418,7 @@ END
                         <div class="text-3xl mb-3">🧠</div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">BAB 1</span>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Logika & Algoritma</h3>
-                        <p class="text-slate-600 text-sm mb-4">Pengertian logika, algoritma, karakteristik, dan pseudocode.</p>
+                        <p class="text-slate-600 text-sm mb-4">Pengertian algoritma, karakteristik, Pseudocode, dan Flowchart.</p>
                     </div>
                     <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">Mulai Belajar &rarr;</span>
                 </div>
@@ -348,7 +429,7 @@ END
                         <div class="text-3xl mb-3">📦</div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">BAB 2</span>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Variabel & Tipe Data</h3>
-                        <p class="text-slate-600 text-sm mb-4">Mengenal tipe data primitif dan aturan penamaan variabel.</p>
+                        <p class="text-slate-600 text-sm mb-4">Mengenal tipe data primitif, konversi data, dan aturan penamaan variabel.</p>
                     </div>
                     <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">Mulai Belajar &rarr;</span>
                 </div>
@@ -359,7 +440,7 @@ END
                         <div class="text-3xl mb-3">⚡</div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">BAB 3</span>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Operator Pemrograman</h3>
-                        <p class="text-slate-600 text-sm mb-4">Operator aritmatika, perbandingan, dan logika boolean.</p>
+                        <p class="text-slate-600 text-sm mb-4">Operator aritmatika, perbandingan (relasional), dan logika boolean.</p>
                     </div>
                     <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">Mulai Belajar &rarr;</span>
                 </div>
@@ -370,7 +451,7 @@ END
                         <div class="text-3xl mb-3">🔀</div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">BAB 4</span>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Percabangan (Control Flow)</h3>
-                        <p class="text-slate-600 text-sm mb-4">Pengambilan keputusan dengan If-Else.</p>
+                        <p class="text-slate-600 text-sm mb-4">Pengambilan keputusan dengan If-Else, Nested If, dan Switch Case.</p>
                     </div>
                     <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">Mulai Belajar &rarr;</span>
                 </div>
@@ -381,7 +462,7 @@ END
                         <div class="text-3xl mb-3">🔄</div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">BAB 5</span>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Perulangan (Looping)</h3>
-                        <p class="text-slate-600 text-sm mb-4">Mekanisme For Loop.</p>
+                        <p class="text-slate-600 text-sm mb-4">Mekanisme For Loop, While Loop, Do-While, dan Infinite Loop.</p>
                     </div>
                     <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">Mulai Belajar &rarr;</span>
                 </div>
@@ -392,7 +473,7 @@ END
                         <div class="text-3xl mb-3">⚙️</div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">BAB 6</span>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Fungsi & Prosedur</h3>
-                        <p class="text-slate-600 text-sm mb-4">Modularisasi kode dan return value.</p>
+                        <p class="text-slate-600 text-sm mb-4">Modularisasi kode, parameter, argumen, dan return value.</p>
                     </div>
                     <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">Mulai Belajar &rarr;</span>
                 </div>
