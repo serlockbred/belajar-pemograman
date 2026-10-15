@@ -17,16 +17,16 @@
         import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/13.0.0/firebase-database.js";
 
         // Konfigurasi Firebase Anda
-       const firebaseConfig = {
-        apiKey: "AIzaSyBMp5ibZ25oufzH9BAc0Eua5g0tNe7NCM",
-        authDomain: "pemogramandasar.firebaseapp.com",
-        databaseURL: "https://pemogramandasar-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "pemogramandasar",
-        storageBucket: "pemogramandasar.firebasestorage.app",
-        messagingSenderId: "135341405190",
-        appId: "1:135341405190:web:b33adbb85d94f3f8d7ff87",
-        measurementId: "G-1S9Z5WQ36B"
-};
+        const firebaseConfig = {
+            apiKey: "AIzaSyBMp5ibZ25oufzH9BAc0Eua5g0tNe7NCM",
+            authDomain: "pemogramandasar.firebaseapp.com",
+            databaseURL: "https://pemogramandasar-default-rtdb.asia-southeast1.firebasebasedatabase.app",
+            projectId: "pemogramandasar",
+            storageBucket: "pemogramandasar.firebasestorage.app",
+            messagingSenderId: "135341405190",
+            appId: "1:135341405190:web:b33adbb85d94f3f8d7ff87",
+            measurementId: "G-1S9Z5WQ36B"
+        };
 
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
@@ -34,7 +34,47 @@
         // DATA MATERI LENGKAP & SOAL KUIS 6 BAB
         const courseData = {
             "bab1": {
-                
+                title: "BAB 1: Logika & Algoritma Pemrograman",
+                description: "Memahami cara berpikir komputasional dan menyusun langkah sistematis penyelesaian masalah.",
+                materi: `
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">1. Pengertian Logika</h3>
+                    <p class="mb-3"><strong>Logika</strong> berasal dari kata Yunani <em>Logos</em> yang berarti hasil pemikiran manusia yang diutarakan melalui kata dan dinyatakan dalam bahasa. Dalam dunia pemrograman, logika adalah kemampuan berpikir secara benar, rasional, dan masuk akal untuk menilai suatu pernyataan apakah bernilai <strong>Benar (True)</strong> atau <strong>Salah (False)</strong>.</p>
+                    
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">2. Pengertian Algoritma</h3>
+                    <p class="mb-3"><strong>Algoritma</strong> adalah urutan langkah-langkah logis dan terstruktur yang disusun secara sistematis untuk menyelesaikan suatu masalah atau menjalankan perintah komputer. Kata 'logis' berarti setiap langkah harus dapat dibuktikan kebenarannya secara rasional.</p>
+                    
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl mb-4 text-sm">
+                        <strong class="text-amber-900">Analogi Logika & Algoritma (Membuat Teh Manis):</strong>
+                        <ol class="list-decimal list-inside mt-2 space-y-1 text-amber-800">
+                            <li>Siapkan cangkir, teh celup, gula, dan air panas.</li>
+                            <li>Masukkan teh celup ke dalam cangkir.</li>
+                            <li>Tuangkan air panas ke dalam cangkir.</li>
+                            <li>Tambahkan 2 sendok makan gula pasir.</li>
+                            <li>Aduk hingga gula larut secara merata.</li>
+                        </ol>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">3. Karakteristik Utama Algoritma</h3>
+                    <p class="mb-2">Menurut Donald E. Knuth, algoritma yang baik harus memenuhi 5 syarat:</p>
+                    <ul class="list-disc list-inside space-y-1 mb-4 pl-2 text-sm">
+                        <li><strong>Input (Masukan):</strong> Memiliki 0 atau lebih data masukan untuk diproses.</li>
+                        <li><strong>Output (Keluaran):</strong> Memiliki minimal 1 hasil/solusi akhir.</li>
+                        <li><strong>Finiteness (Keterbatasan):</strong> Algoritma harus memiliki titik akhir (harus berhenti setelah menyelesaikan sejumlah langkah).</li>
+                        <li><strong>Definiteness (Kepastian):</strong> Setiap langkah harus jelas, pasti, dan tidak bermakna ganda (ambigu).</li>
+                        <li><strong>Effectiveness (Keefektifan):</strong> Setiap langkah sederhana dan memungkinkan untuk dikerjakan oleh komputer.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">4. Cara Penulisan Algoritma</h3>
+                    <p class="mb-2">Ada 3 cara umum menuliskan algoritma:</p>
+                    <ol class="list-decimal list-inside space-y-2 mb-4 pl-2 text-sm">
+                        <li><strong>Kalimat Deskriptif:</strong> Menggunakan bahasa sehari-hari.</li>
+                        <li><strong>Pseudocode:</strong> Penulisan yang menyerupai bahasa pemrograman asli tetapi lebih bebas dan mudah dibaca manusia.</li>
+                        <li><strong>Flowchart:</strong> Diagram alir yang menggambarkan alur logika menggunakan simbol-simbol grafis standar.</li>
+                    </ol>
+
+                    <div class="bg-slate-800 text-slate-100 p-4 rounded-xl text-sm mb-4">
+                        <span class="text-indigo-400 font-bold">// Contoh Pseudocode: Menghitung Luas Persegi Panjang</span>
+                        <pre class="mt-2">
 START
   READ panjang
   READ lebar
@@ -42,6 +82,41 @@ START
   PRINT luas
 END
                         </pre>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">5. Simbol Utama Flowchart</h3>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+                            <thead class="bg-slate-100">
+                                <tr>
+                                    <th class="border border-slate-200 p-2">Simbol</th>
+                                    <th class="border border-slate-200 p-2">Nama</th>
+                                    <th class="border border-slate-200 p-2">Fungsi / Kegunaan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-semibold">Oval / Kapsul</td>
+                                    <td class="border border-slate-200 p-2">Terminal</td>
+                                    <td class="border border-slate-200 p-2">Menandai awal (START) atau akhir (END) program</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-semibold">Jajar Genjang</td>
+                                    <td class="border border-slate-200 p-2">Input / Output</td>
+                                    <td class="border border-slate-200 p-2">Menerima masukan (READ) atau menampilkan hasil (PRINT)</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-semibold">Persegi Panjang</td>
+                                    <td class="border border-slate-200 p-2">Process</td>
+                                    <td class="border border-slate-200 p-2">Proses perhitungan matematis atau manipulasi data</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-slate-200 p-2 font-semibold">Belah Ketupat</td>
+                                    <td class="border border-slate-200 p-2">Decision</td>
+                                    <td class="border border-slate-200 p-2">Percabangan / Keputusan kondisi (Ya / Tidak)</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 `,
                 quiz: [
@@ -59,6 +134,11 @@ END
                         question: "Simbol flowchart berbentuk Jajar Genjang digunakan untuk mewakili...",
                         options: ["Proses perhitungan", "Awal/Akhir program", "Input dan Output data", "Keputusan / Percabangan"],
                         answer: 2
+                    },
+                    {
+                        question: "Asal kata Logika adalah 'Logos' yang berasal dari bahasa...",
+                        options: ["Yunani", "Latin", "Inggris", "Arab"],
+                        answer: 0
                     }
                 ]
             },
@@ -394,7 +474,7 @@ let hasil = hitungLuasPersegi(5); // hasil: 25
                         <div class="text-3xl mb-3">🧠</div>
                         <span class="text-xs font-bold text-indigo-600 uppercase tracking-wider">BAB 1</span>
                         <h3 class="text-lg font-bold text-slate-900 mb-2">Logika & Algoritma</h3>
-                        <p class="text-slate-600 text-sm mb-4">Pengertian algoritma, karakteristik, Pseudocode, dan Flowchart.</p>
+                        <p class="text-slate-600 text-sm mb-4">Pengertian logika, algoritma, 5 syarat Knuth, Pseudocode, dan Flowchart.</p>
                     </div>
                     <span class="text-indigo-600 font-semibold text-sm inline-flex items-center">Mulai Belajar &rarr;</span>
                 </div>
